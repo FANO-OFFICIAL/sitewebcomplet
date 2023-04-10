@@ -10,9 +10,9 @@
     </head>
     <body>
         <?php
-            include("header.php");
-            include("main.php");
-            include("footer.php");
+            foreach ($body as $k => $v) {
+                checkTypeOfTag($v['tag'],$v['content']);
+            }
         ?>
         <?php
             include("script.php");

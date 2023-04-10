@@ -1,1 +1,1 @@
-<img src="<?php echo $img_src; ?>" alt="<?php echo $img_alt; ?>" />
+<img src="<?php echo $content["src"]; ?>" alt="<?php echo $content["alt"]; ?>" />

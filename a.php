@@ -1,28 +1,12 @@
-<?php
-foreach ($a_href as $k => $v) {
-    if(is_array($v)){
-?>
-<a target="<?php if(isset($v["target"])){echo $v["target"];} ?>" href="<?php echo $k; ?>" class="<?php if(isset($v["class"])){echo $v["class"];} ?>">
+<a href="<?php echo $content["href"]; ?>" target="<?php echo $content["target"]; ?>" class="<?php echo $content["class"]; ?>">
     <?php
-    if(isset($v["img_src"])){
-        $img_src = $v["img_src"];
-        $img_alt = $v["img_alt"];
-        include("img.php");
-    } 
-    ?> 
+        if(!empty($content["content"])){
+            foreach ($content["content"] as $k => $v) {
+                checkTypeOfTag($v['tag'],$v['content']);
+            }
+        }
+    ?>
     <?php 
-    echo $v["text"];
+        echo $content["text"]; 
     ?>
 </a>
-<?php
-    }else{
-    ?>
-<a href="<?php echo $k; ?>">
-    <?php 
-    echo $v;
-    ?>
-</a>
-    <?php
-    }
-}
-?>

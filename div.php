@@ -1,7 +1,7 @@
 <div>
     <?php
-        if(isset($a_href)){
-            include("a.php");
+        foreach ($content as $k => $v) {
+            checkTypeOfTag($v['tag'],$v['content']);
         }
     ?>
 </div>
