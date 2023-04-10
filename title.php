@@ -1,1 +1,1 @@
-<title>Titre</title>
+<title><?php echo $title; ?></title>
