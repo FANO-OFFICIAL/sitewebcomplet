@@ -2,10 +2,11 @@
 foreach ($a_href as $k => $v) {
     if(is_array($v)){
 ?>
-<a href="<?php echo $k; ?>" class="lien-icone">
+<a target="<?php if(isset($v["target"])){echo $v["target"];} ?>" href="<?php echo $k; ?>" class="<?php if(isset($v["class"])){echo $v["class"];} ?>">
     <?php
-    if($v["img_src"]){
+    if(isset($v["img_src"])){
         $img_src = $v["img_src"];
+        $img_alt = $v["img_alt"];
         include("img.php");
     } 
     ?> 
@@ -16,7 +17,7 @@ foreach ($a_href as $k => $v) {
 <?php
     }else{
     ?>
-<a href="<?php echo $k; ?>" class="lien-icone">
+<a href="<?php echo $k; ?>">
     <?php 
     echo $v;
     ?>

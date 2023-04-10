@@ -1,1 +1,1 @@
-<img src="<?php echo $img_src; ?>" alt="Logo Robbie Lens" />
+<img src="<?php echo $img_src; ?>" alt="<?php echo $img_alt; ?>" />
